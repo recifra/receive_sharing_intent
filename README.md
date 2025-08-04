@@ -7,9 +7,9 @@ A Flutter plugin that enables flutter apps to receive sharing photos, videos, te
 Also, supports iOS Share extension and launching the host app automatically.
 Check the provided [example](./example/lib/main.dart) for more info.
 
-|             | Android                 | iOS               |
-| ----------- | ----------------------- | ----------------- |
-| **Support** | SDK 19+ (Kotlin 1.9.22) | 12.0+ (Swift 5.0) |
+|             | Android                | iOS               |
+| ----------- | ---------------------- | ----------------- |
+| **Support** | SDK 19+ (Kotlin 2.1.0) | 12.0+ (Swift 5.0) |
 
 ![Alt Text](./example/demo.gif)
 
@@ -63,7 +63,7 @@ Add the following filters to your [android/app/src/main/AndroidManifest.xml](./e
                 android:scheme="content" />
         </intent-filter>
 
-          <!--TODO: Add this filter, if you want to support sharing text into your app-->
+        <!--TODO: Add this filter, if you want to support sharing text into your app-->
         <intent-filter>
             <action android:name="android.intent.action.SEND" />
             <category android:name="android.intent.category.DEFAULT" />
@@ -83,7 +83,7 @@ Add the following filters to your [android/app/src/main/AndroidManifest.xml](./e
             <data android:mimeType="image/*" />
         </intent-filter>
 
-          <!--TODO: Add this filter, if you want to support sharing videos into your app-->
+        <!--TODO: Add this filter, if you want to support sharing videos into your app-->
         <intent-filter>
             <action android:name="android.intent.action.SEND" />
             <category android:name="android.intent.category.DEFAULT" />
@@ -228,7 +228,7 @@ end
 #### 6. Add Runner and Share Extension in the same group
 
 - Go to `Signing & Capabilities` tab and add App Groups capability in **BOTH** Targets: `Runner` and `Share Extension`
-- Add a new container with the name of your choice. For example `group.MyContainer` in the example project its `group.com.kasem.ShareExtention`
+- Add a new container with the name of your choice. For example `group.MyContainer` in the example project its `group.com.kasem.ShareExtension`
 - Add User-defined(`Build Settings -> +`) string `CUSTOM_GROUP_ID` in **BOTH** Targets: `Runner` and `Share Extension` and set value to group id created above. You can use different group ids depends on your flavor schemes
 
 #### 7. Go to Build Phases of your Runner target and move `Embed Foundation Extension` to the top of `Thin Binary`.

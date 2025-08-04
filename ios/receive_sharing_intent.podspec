@@ -13,7 +13,7 @@ A flutter plugin that enables flutter apps to receive sharing photos, text or ur
   s.license          = { :file => '../LICENSE' }
   s.author           = { 'Kasem' => 'kasem.jaffer@gmail.com' }
   s.source           = { :path => '.' }
-  s.source_files = 'Classes/**/*'
+  s.source_files = 'receive_sharing_intent/Sources/receive_sharing_intent/**/*'
   s.dependency 'Flutter'
   s.platform = :ios, '12.0'
 
@@ -25,5 +25,5 @@ A flutter plugin that enables flutter apps to receive sharing photos, text or ur
   # required reason APIs, update the PrivacyInfo.xcprivacy file to describe your
   # plugin's privacy impact, and then uncomment this line. For more information,
   # see https://developer.apple.com/documentation/bundleresources/privacy_manifest_files
-  # s.resource_bundles = {'receive_sharing_intent_privacy' => ['Resources/PrivacyInfo.xcprivacy']}
+  s.resource_bundles = {'receive_sharing_intent_privacy' => ['receive_sharing_intent/Sources/receive_sharing_intent/PrivacyInfo.xcprivacy']}
 end
